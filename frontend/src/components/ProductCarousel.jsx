@@ -6,14 +6,12 @@ import { useGetTopProductsQuery } from "../slices/productApiSlice";
 import { Link } from "react-router-dom";
 
 const ProductCarousel = () => {
-  const { data: products, isLoading, error } = useGetTopProductsQuery();
-  return isLoading ? (
-    <Loader />
-  ) : error ? (
+  const { data: products, error } = useGetTopProductsQuery();
+  return error ? (
     <Message variant="danger">{error}</Message>
   ) : (
     <Carousel pause="hover" className="mb-4 bg-primary">
-      {products.map((product) => (
+      {products?.map((product) => (
         <Carousel.Item>
           <Link to={`/product/${product._id}`}>
             <Image src={product.image} alt={product.name} fluid />

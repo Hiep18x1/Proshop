@@ -21,7 +21,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../slices/cartSlice";
-
+import Meta from "../components/Meta";
 const ProductScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -79,6 +79,7 @@ const ProductScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta title={product.name}></Meta>
           <Row>
             <Col md={5}>
               {/* fluid make the image respnsive and fluid within paretns   */}
