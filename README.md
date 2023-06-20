@@ -28,6 +28,8 @@ khi import file nhớ viết đủ đuôi: ví dụ 'data/products.js'
 
 Khi run build thi mọi chỉnh sữa sẽ không ảnh huongr tơi folder build
 
+khi deploy, ta cần add thêm ip vào mongo để nó có thể truy cập từ mọi nơi
+
 <!-- Kiến thức hay: -->
 
 refetch:vi du nhu khi xóa 1 user, t bắn 1 api lên server, tuy nhiên store trong redux của ta không bị thay đổi, vì thế nên ta phải refetch để lấy lại data từ server
